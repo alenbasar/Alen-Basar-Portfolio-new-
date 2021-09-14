@@ -13,7 +13,7 @@ type Props = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const Home = (props: Props) => {
-  const { className = "", content, pageTitle, ...restProps } = props;
+  const { content } = props;
   const { heading, subheading, cta, ctaLink } = content;
   return (
     <section className="c-home">

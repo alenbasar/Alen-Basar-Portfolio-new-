@@ -1,7 +1,7 @@
-import React, { useState, useEffect, HTMLAttributes } from "react";
+import React from "react";
 import { MenuItem, desktopMenu } from "../../src/constants/menu";
 import Dompurify from "dompurify";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 
 const renderLink = (menuItem: MenuItem) => {
