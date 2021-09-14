@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+.c-logo {
+  position: fixed;
+  color: white;
+}
+.c-sidebar {
+  position: fixed;
+  background-color: #0a0a0a;
+  border: 3px solid #324350;
+  border-left: none;
+  width: 3.5rem;
+  height: 50vh;
+  margin-top: 25vh;
+  border-radius: 0 30px 30px 0;
+  & ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__menu-item {
+    display: block;
+    width: 2rem;
+    transition: all 0.2s;
+
+    // For SVG's
+    path {
+      fill: #353c41;
+    }
+    &:nth-of-type(5) {
+      width: 1.7rem;
+    }
+
+    &:hover {
+      transform: scale(1.5);
+      path {
+        fill: #324350;
+      }
+    }
+
+    // For tooltips
+    &__tooltip {
+      background-color: yellow;
+      font-family: "Noto Sans", sans-serif;
+    }
+  }
+}
