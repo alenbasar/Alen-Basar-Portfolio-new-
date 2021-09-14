@@ -18,9 +18,46 @@
     &-heading {
       // color: red;
     }
-    &-subheading {
-      &:nth-of-type(3) {
-        margin-bottom: 2rem;
+    &-subheading1 {
+      user-select: none;
+      font-size: 2rem;
+      font-weight: bold;
+      span {
+        cursor: pointer;
+        position: relative;
+        // display: inline-block;
+        // margin-left: 0.2rem;
+        transition: all 0.3s ease-in-out;
+        animation: glow 2s ease-in-out infinite;
+        &:hover {
+          font-style: normal;
+          transform: translateY(-5px);
+          // font-size: 2.5rem;
+          // color: #324350;
+        }
+      }
+    }
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 20px #579da5;
+      }
+      100% {
+        text-shadow: 0 0 20px #579da5;
+      }
+    }
+    &-subheading2 {
+      user-select: none;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      span {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        animation: glow 2s ease-in-out infinite;
+        &:hover {
+          font-style: normal;
+          color: #ffffff;
+        }
       }
     }
     &-contact-btn {
