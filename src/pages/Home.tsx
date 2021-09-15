@@ -24,14 +24,14 @@ const Home = (props: Props) => {
         <h1 className="c-home__banner-hero">
           {h.map((item, index) => (
             <span className="blast" key={index}>
-              {item == " " ? "\u00A0" : item}
+              {item === " " ? "\u00A0" : item}
               {/* {item} */}
             </span>
           ))}
           <br />
           {s1.map((item, index) => (
             <span key={index} className="blast">
-              {item == " " ? "\u00A0" : item}
+              {item === " " ? "\u00A0" : item}
               {/* {item} */}
             </span>
           ))}
@@ -39,7 +39,7 @@ const Home = (props: Props) => {
           <br />
           {s2.map((item, index) => (
             <span key={index}>
-              {item == " " ? "\u00A0" : item}
+              {item === " " ? "\u00A0" : item}
               {/* {item} */}
             </span>
           ))}
