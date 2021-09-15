@@ -5,20 +5,24 @@
   color: white;
 }
 .c-sidebar {
-  position: fixed;
+  // position: fixed;
   background-color: #0a0a0a;
   border: 3px solid #324350;
+  border-radius: 0 0.7rem 0.7rem 0;
   border-left: none;
   width: 3.5rem;
-  height: 50vh;
-  margin-top: 25vh;
-  border-radius: 0 30px 30px 0;
+  height: 65vh;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  // -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   & ul {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   &__menu-item {
