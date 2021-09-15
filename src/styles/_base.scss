@@ -1,6 +1,12 @@
 // Reset
 @import "./reset.scss";
 
+// Animations
+@import "./animations/textAnim";
+
+// Constants
+@import "./fonts";
+
 // Components
 @import "./components/sidebar";
 @import "./components/home";

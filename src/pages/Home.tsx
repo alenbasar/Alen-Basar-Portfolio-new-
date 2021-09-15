@@ -17,20 +17,33 @@ const Home = (props: Props) => {
   const { heading, subheading, cta, ctaLink } = content;
   const s1 = subheading[0].split("");
   const s2 = subheading[1].split("");
+  const h = heading.split("");
   return (
     <section className="c-home">
       <div className="c-home__banner">
-        <h1 className="c-home__banner-heading">{heading}</h1>
-        <div className="c-home__banner-subheading1">
+        <h1 className="c-home__banner-hero">
+          {h.map((item, index) => (
+            <span className="blast" key={index}>
+              {item == " " ? "\u00A0" : item}
+              {/* {item} */}
+            </span>
+          ))}
+          <br />
           {s1.map((item, index) => (
-            <span key={index}>{item}</span>
+            <span key={index} className="blast">
+              {item == " " ? "\u00A0" : item}
+              {/* {item} */}
+            </span>
           ))}
-        </div>
-        <div className="c-home__banner-subheading2">
+
+          <br />
           {s2.map((item, index) => (
-            <span key={index}>{item}</span>
+            <span key={index}>
+              {item == " " ? "\u00A0" : item}
+              {/* {item} */}
+            </span>
           ))}
-        </div>
+        </h1>
 
         <Link to={ctaLink} className="c-home__banner-contact-btn">
           {cta}
