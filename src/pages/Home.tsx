@@ -17,6 +17,9 @@ const Home = (props: Props) => {
   const { content } = props;
   const { heading, subheading, cta, ctaLink } = content;
   const [show, setShow] = useState(false);
+  const [isAnimated, setIsAnimated] = useState("");
+
+
   useEffect(() => {
     setShow(true);
   }, []);
@@ -36,7 +39,7 @@ const Home = (props: Props) => {
               timeout={300}
               classNames="slide"
             >
-              <span key={index}>
+                <span key={index} className={`c-home__banner-hero__character ${isAnimated || ""}`} onMouseLeave={()=>{setIsAnimated("animate__animated animate__jello")}}>
                 {item === " " ? "\u00A0" : item}
                 {/* {item} */}
               </span>
@@ -44,7 +47,7 @@ const Home = (props: Props) => {
           ))}
           <br />
           {s1.map((item, index) => (
-            <span key={index}>
+            <span key={index} className={isAnimated} onMouseLeave={()=>setIsAnimated("animate__animated animate__jello")}>
               {item === " " ? "\u00A0" : item}
               {/* {item} */}
             </span>
@@ -52,7 +55,7 @@ const Home = (props: Props) => {
 
           <br />
           {s2.map((item, index) => (
-            <span key={index}>
+            <span key={index} className={isAnimated}>
               {item === " " ? "\u00A0" : item}
               {/* {item} */}
             </span>
