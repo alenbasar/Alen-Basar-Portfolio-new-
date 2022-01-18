@@ -1,6 +1,6 @@
 # Portfolio V2
 
-This is a personal portfolio with modern and elegant design
+This is a personal portfolio with modern and elegant design.
 
 ### Stack
 - TypeScript
